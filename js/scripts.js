@@ -25,9 +25,12 @@
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
 
+        // var speed = "slow";
+
+        // if (scrollDistance > 1200) speed = "fast";
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+        }, 400,"swing");
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
